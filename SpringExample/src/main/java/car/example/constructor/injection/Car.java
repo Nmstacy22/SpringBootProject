@@ -1,6 +1,6 @@
 package car.example.constructor.injection;
 
-public class Car {
+public class Car {//class is dependent on specification
     private Specification specification;
     //constructor
     public Car(Specification specification) {

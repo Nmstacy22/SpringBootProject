@@ -11,6 +11,6 @@
     </bean>
 
     <bean id= "myCar" class= "car.example.constructor.injection.Car">
-        <constrfuctor-arg ref="carSpecification"/>
+        <constructor-arg ref="carSpecification"/>
     </bean>
 </beans>
