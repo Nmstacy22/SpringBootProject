@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="userDatabase" class="com.loosecoupling.UserDatabaseProvider">
+        <!-- <property name="databaseUrl" value="Fetching data now from database"/> -->
+    </bean>
+
+    <bean id="webService" class="com.loosecoupling.WebServiceProvider">
+        <!-- <property name="webUrl" value="Fetching data again from web service"/> -->
+    </bean>
+
+
+    <bean id="userManagerWithUserDatabaseProvider" class="com.loosecoupling.UserManagers">
+        <constructor-arg ref="userDatabase"/>         
+    </bean>
+    <bean id="userManagerWithWebServiceProvider" class="com.loosecoupling.UserManagers">
+        <constructor-arg ref="webService"/>         
+    </bean>
+    
+</beans>
