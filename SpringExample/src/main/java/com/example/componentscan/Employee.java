@@ -1,12 +1,16 @@
 package com.example.componentscan;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component("employee1") // This annotation registers the class as a Spring bean with the id "employee"
 public class Employee {
     private int employeeId;
+    @Value("John") // Injects the value "John" into the FirstName field
     private String FirstName;
+    @Value("${java.home}") // Injects the value of the system property "java.home" into the LastName field
     private String LastName;
+    @Value("#{4*4}") // Injects the value 16 into the salary field using SpEL (Spring Expression Language)
     private double salary;
     
     public int getEmployeeId() {
