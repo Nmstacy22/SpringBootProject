@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "car.example.autowiring.name.App",
+            "projectName": "SpringExample"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-FrstspringApplication<frstspring>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
