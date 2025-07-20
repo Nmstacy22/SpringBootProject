@@ -17,7 +17,6 @@ import com.ecommerce.project.service.CategoryService;
 public class CategoryController{
     private CategoryService categoryService;
 
-    @Autowired
     public CategoryController(CategoryService categoryService) {
         this.categoryService = categoryService;
     }
